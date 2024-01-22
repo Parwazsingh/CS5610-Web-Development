@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Layout</title>
+</head>
+<body>
+
+    <select>
+        <option value="Speed">SpeedGrader</option>
+     </select>
+             <hr/>
+             <h2>Assignment Name</h2>
+             <input type="text" 
+              value="A1 - ENV + HTML"/>
+            </br>
+        </br>
+
+              <textarea cols="20" rows="2">This is the assignment description.</textarea>
+    </br>
+</br>
+                <label for="Points">Points</label><br/>
+               <input type="text" id="Points"value="100"/>
+</br>
+</br>
+
+               <label for="Assignment-Group"> Assignment Group </label><br/>
+<select id="Assignment-Group">
+   <option selected value="Assignments">
+       ASSIGNMENTS</option>
+</select>
+</br>
+</br>
+
+<label for="Display-Grade"> Display Grade as </label><br/>
+<select id="Display-Grade">
+   <option selected value="percentage">
+       Percentage</option>
+</select>
+
+</br>
+</br>
+
+<label for="Submission-Type">Submission Type</label><br/>
+<select id="Submission-Type">
+   <option selected value="online">
+       Online</option>
+</select>
+</br>
+</br>
+
+
+<label>Online Entry Options</label>
+<br/>
+<input type="checkbox" value="ENTRY"
+      name="check-entry" id="chkbox-entry"/>
+<label for="chkbox-entry">Text Entry</label>    <br/>
+
+<input type="checkbox" value="WEBSITE"
+      name="check-website" id="chkbox-website"/>
+<label for="chkbox-website">Website URL</label>    <br/>
+
+<input type="checkbox" value="MEDIA"
+      name="check-media" id="chkbox-media"/>
+<label for="chkbox-media">Media Recordings</label> <br/>
+
+<input type="checkbox" value="STUDENT"
+      name="check-student" id="chkbox-student"/>
+<label for="chkbox-student">Student Annotation</label><br/>
+
+<input type="checkbox" value="FILE"
+      name="check-file" id="chkbox-file"/>
+<label for="chkbox-file">File Uploads</label>
+
+</br>
+</br>
+
+Assign
+</br>
+<label for="Assign">Assign to</label><br/>
+               <input type="text" id="Assign"value="Everyone"/>
+            </br>
+        </br>
+
+        
+  <label for="text-fields-due"> Due </label><br/>
+  <input type="date"
+        id="text-fields-due"
+        value="2021-01-01"/><br/>
+
+        <br/>
+
+
+        <label for="text-fields-available">Available from </label><br/>
+  <input type="date"
+        id="text-fields-available"
+        value="2021-01-01"/><br/>
+        <br/>
+
+
+        <label for="text-fields-until">Until </label><br/>
+        <input type="date"
+              id="text-fields-until"
+              value="2021-01-01"/><br/>
+
+              <br/>
+
+              <a href="/Kanbas/Courses/Assignments/screen.html">
+                <button>Cancel</button>
+              </a>
+              <a href="/Kanbas/Courses/Assignments/screen.html">
+                <button>Save</button>
+              </a>
+</body>
+</html>
