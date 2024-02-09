@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../Navigation/index.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../Courses/Modules/index.css">
+    <link rel="stylesheet" href="../Modules/index.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -32,11 +32,9 @@
                   CS4550.12631.202410
                   </font>
           </div>
-          
           <div class="justify-content-end wd-flex-col3">
              
                   <button class="btn btn-dark">
-                    <i class="fa-solid fa-glasses"></i>
                     <a data-bs-toggle="collapse" href="#collapseCourseNav" role="button" aria-expanded="false" aria-controls="collapseCourseNav">
                       <i class="fa fa-chevron-down" style="color: white; margin: 10px;" aria-hidden="true"></i>
                     </a>
@@ -44,29 +42,23 @@
           </div>
       </div>
   </div>
-  <div class="collapse" style="width: 100%; height: 100vh;" id="collapseCourseNav">
-    <ul class="wd-collapsed-nav" style="width: 100%; height: 100vh;">
-      <a data-bs-toggle="collapse" href="#collapseCourseNav" role="button" aria-expanded="false" aria-controls="collapseCourseNav" style="float: right;">
-        <i class="fa-solid fa-xmark fa-xl" style="color:gray;"></i>
-      </a>
+  <div class="collapse" style="width: 100%; height: 100%;" id="collapseCourseNav">
+    <ul class="wd-collapsed-nav" style="width: 100%; height: 100%;">
       <li>
-        <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-house fa-xs"></i> Home</a></li>
+        <a href="../Home/screen.html"><i class="fa-solid fa-house fa-xs"></i> Home</a></li>
       <li class="wd-active">
         
-        <a href="../Modules/screen.html"> 
-          <i style="color: red;" class="fa-solid fa-circle-nodes fa-xs"></i> 
-          <span style="color: red;">Modules</span>
-        </a>
+        <a href="../Modules/screen.html"> <i class="fa-solid fa-circle-nodes fa-xs"></i> Modules</a>
       </li>
       <li>
         
-        <a href="https://piazza.com/class/lqlwl9wn2q969r"><i class="fa-solid fa-plug fa-xs"></i>  Piazza</a></li>
+        <a href="http://piazza.com"><i class="fa-solid fa-plug fa-xs"></i>  Piazza</a></li>
       <li><a href="#"><i class="fa-solid fa-plug fa-xs"></i>  Zoom</a></li>
       <li>
-        <a href="../../Courses/Assignments/screen.html"><i class="fa-solid fa-pen-to-square fa-xs"></i>  Assignments</a>
+        <a href="../Assignments/screen.html"><i class="fa-solid fa-pen-to-square fa-xs"></i>  Assignments</a>
       </li>
       <li><a href="#"><i class="fa-solid fa-rocket fa-xs"></i>  Quizzes</a></li>
-      <li><a href="../../Courses/Grades/screen.html"><i class="fa-solid fa-receipt fa-xs"></i>  Grades</a></li>
+      <li><a href="../Grades/screen.html"><i class="fa-solid fa-receipt fa-xs"></i>  Grades</a></li>
       <li><a href="#"><i class="fa-solid fa-plug fa-xs"></i>  Panopto Video</a></li>
       <li><a href="#"><i class="fa-regular fa-comments fa-xs"></i>  Discussion <i class="fa-regular fa-eye-slash fa-sm wd-hidden"></i></a> </li>
       <li><a href="#"><i class="fa-solid fa-bullhorn fa-xs"></i>  Announcement <i class="fa-regular fa-eye-slash fa-sm wd-hidden"></i></a> </li>
@@ -74,8 +66,8 @@
 
     </ul>
   </div>
-  <div class="collapse" style="width: 100%; height: 100vh;" id="collapseKanbas">
-    <ul class="wd-collapsed-nav" style="height: 100vh; width: 100%;">
+  <div class="collapse" style="width: 100%; height: 100%;" id="collapseKanbas">
+    <ul class="wd-collapsed-nav">
       <a data-bs-toggle="collapse" href="#collapseKanbas" role="button" aria-expanded="false" aria-controls="collapseKanbas" style="float: right;">
         <i class="fa-solid fa-xmark fa-xl" style="color:gray;"></i>
       </a>
@@ -84,12 +76,7 @@
         <a href="../../Dashboard/screen.html">
           <i class="fa fa-tachometer"></i> Dashboard</a>
       </li>
-      <li class="wd-active">
-        <a href="../../Courses/Home/screen.html">
-          <i class="fa-solid fa-book" style="color: red;"></i> <!-- Keep the icon color inline -->
-          <span style="color: red;">Courses</span> <!-- Apply the class for the text color -->
-        </a> 
-      </li>
+      <li class="wd-active"><a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>  Courses</a> </li>
       <li><a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a></li>
       <li><a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a></li>
       <li><a href="#"><i class="fa-regular fa-clock"></i> History</a></li>
@@ -178,10 +165,10 @@
      <div class="wd-flex-row-container"> 
       <div style="padding-right: 20px;" class="d-none d-md-block">
         <ul class="wd-navigation">
-          <li class="wd-active">
-            <a href="../../Courses/Home/screen.html"> Home</a>
+          <li >
+            <a href="../Home/screen.html"> Home</a>
           </li>
-          <li ><a href="../Modules/screen.html"> Modules</a></li>
+          <li class="wd-active" ><a href="../Modules/screen.html"> Modules</a></li>
           <li><a href="https://piazza.com/class/lqlwl9wn2q969r"> Piazza</a></li>
           <li>
             <a href="#"> Zoom Meetings</a>
@@ -422,59 +409,6 @@
                 
             </li>
           </ul>
-      </div>
-      <div class="flex-grow-0 me-2 d-none d-lg-block" style="padding-left: 10px; width: 250px">
-        <div class="col"><h6><b>Course Status</b></h6></div>
-        <!-- <button>Unpublish</button>
-        <button>Published</button> -->
-        <button style="background-color: lightgray; color: black; border-color: gray;" type="button" class="btn btn-primary"><i class="fa-solid fa-ban"></i> Unpublish</button>
-        <button style="background-color: green;" type="button" class="btn btn-secondary" disabled><i class="fa-solid fa-circle-check"></i> Published</button>
-  <br>
-  <br>
-        <ul class="list-group" style="list-style: none;">
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-solid fa-file-import"></i> Import Existing Content</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-brands fa-creative-commons-sa"></i> Import from Commons</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-solid fa-bullseye"></i> Choose Home Page</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-solid fa-chart-simple"></i> View Course Stream</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-solid fa-bullhorn"></i> New Announcement</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-solid fa-chart-simple"></i> New Analytics</a></li>
-          <li style="margin-bottom: 5px;" class="list-group-item list-group-item-secondary"><a style="text-decoration: none; color: black;" href="#"><i class="fa-regular fa-bell"></i> View Course Notifications</a></li>
-        </ul>
-        <br>
-
-        <b>To Do</b>
-                <hr />
-            <div class="wd-flex-row-container">
-                <div>
-                    <i class="fa fa-plus-circle" style="color: red;margin-left: 10px;margin-right: 10px;" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <a style="color: red;font-size: smaller;">Grade A1 - ENV + HTML</a><br>
-                    <a style="font-size: x-small">100 points- Sep 18 at 11:59pm</a>
-                </div>
-                <div>
-                    <i class="fa fa-times" style="color: grey;margin-left: 50px;margin-right: 10px;" aria-hidden="true"></i>
-                </div>
-            </div>
-
-          <br>
-  
-        <div class="container">
-          <div class="row">
-              <div class="col"><h6><b>Coming Up</b></h6></div>
-            
-              <div align="right" class="col"><a style="font-size: small; color: red; text-decoration: none;" href="#"><i class="fa-regular fa-calendar"></i> View Calendar</a></div>
-          </div>
-        </div>
-        <hr>
-        <ul style="list-style: none;">
-          <li>
-              <a style="text-decoration: none;" href="#"><span style="color: red;"><i class="fa-regular fa-calendar"></i>  Lecture</span> CS4550.12631.202410 <span><br>Sep 7 at 11:45am</span></a></li>
-          <li>
-            <a style="text-decoration: none;" href="#"><span style="color: red;"><i class="fa-regular fa-calendar"></i>  Lecture</span> CS4550.12631.202410 <span><br>Sep 11 at 11:45am</span></a>
-          </li>
-          <li><a style="text-decoration: none;" href="#"><span style="color: red;"><i class="fa-regular fa-calendar"></i>  Lecture</span><br> CS5610 06 SP23 <span><br>Sep 11 at 6pm</span></a></li>
-        </ul>
       </div>
     </div>
   </div>
