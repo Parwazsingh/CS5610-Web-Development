@@ -18,10 +18,10 @@ function Courses() {
   const listurl = page.split("/");
   console.log(listurl.length);
   let breadcrumb = listurl[listurl.length - 1];
-  let lastSECOND = listurl[listurl.length - 2];
+  const lastSECOND = listurl[listurl.length - 2];
   if(lastSECOND == "Assignments"){
     const assignmentName = assignments.find((assignment) => assignment._id=== listurl[listurl.length-1]);
-    breadcrumb = lastSECOND + "  >  " + assignmentName?.title
+    breadcrumb = lastSECOND + "  >  " + assignmentName?.title;
   }
   return (
     <div>
@@ -45,12 +45,14 @@ function Courses() {
       </div>
 
       <div className="wd-flex-row-container">
+        <div className="d-none d-md-block">
         <CourseNavigation />
-        <div>
-          {/* add position-fixed in the below div classname */}
+        </div>
+        <div className="flex-fill">
+          {/* add position-fixed in the below div classname, also add this paddingTop: "30px" in the syle below*/}
           <div
-            className="overflow-y-scroll bottom-0 end-0"
-            style={{ left: "320px", top: "50px", paddingTop: "30px" }} >
+            className=" bottom-0 end-0"
+            style={{ left: "320px", top: "50px" }} >
             <Routes>
               <Route path="/" element={<Navigate to="Home" />} />
               <Route path="Home" element={<Home />} />
