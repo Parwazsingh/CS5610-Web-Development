@@ -1,0 +1,434 @@
+[
+    {
+      "_id": "A101",
+      "title": "A1 SETUP",
+      "course": "RS101",
+      "subtitle": "Week 0 - SETUP - Week starting on Monday September 5th (9/5/2022) Module |",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A102",
+      "title": "A2 HTML",
+      "course": "RS101",
+      "subtitle": "Week 1: Fundamentals of HTML",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A103",
+      "title": "A3 CSS",
+      "course": "RS101",
+      "subtitle": "Week 2: Styling with CSS",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A104",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS101",
+      "subtitle": "Week 3: Responsive Design with Bootstrap",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A105",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS101",
+      "subtitle": "Week 4: Dynamic Interactions with JavaScript",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A106",
+      "title": "A6 REACT",
+      "course": "RS101",
+      "subtitle": "Week 5: Building Components with React",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A201",
+      "title": "A1 SETUP",
+      "course": "RS102",
+      "subtitle": "Week 0: Development Environment Setup",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A202",
+      "title": "A2 HTML",
+      "course": "RS102",
+      "subtitle": "Week 1: Advanced HTML Structures",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A203",
+      "title": "A3 CSS",
+      "course": "RS102",
+      "subtitle": "Week 2: Advanced Styling Techniques with CSS",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A204",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS102",
+      "subtitle": "Week 3: Bootstrap Customization and SASS",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A205",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS102",
+      "subtitle": "Week 4: JavaScript ES6 and Beyond",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A206",
+      "title": "A6 REACT",
+      "course": "RS102",
+      "subtitle": "Week 5: Advanced React Patterns",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A301",
+      "title": "A1 SETUP",
+      "course": "RS103",
+      "subtitle": "Introduction and Setup for Modern Web Development",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A302",
+      "title": "A2 HTML",
+      "course": "RS103",
+      "subtitle": "Deep Dive into HTML5",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A303",
+      "title": "A3 CSS",
+      "course": "RS103",
+      "subtitle": "Mastering Layouts with CSS Grid and Flexbox",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A304",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS103",
+      "subtitle": "Utilizing Bootstrap for Complex Projects",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A305",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS103",
+      "subtitle": "Advanced JavaScript Concepts and Techniques",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A306",
+      "title": "A6 REACT",
+      "course": "RS103",
+      "subtitle": "React Ecosystem and Advanced State Management",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A401",
+      "title": "A1 SETUP",
+      "course": "RS104",
+      "subtitle": "Week 0: Preparing for Full Stack Development",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A402",
+      "title": "A2 HTML",
+      "course": "RS104",
+      "subtitle": "Week 1: Semantic HTML and Best Practices",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A403",
+      "title": "A3 CSS",
+      "course": "RS104",
+      "subtitle": "Week 2: CSS for Scalable Applications",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A404",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS104",
+      "subtitle": "Week 3: Advanced Responsive Design with Bootstrap",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A405",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS104",
+      "subtitle": "Week 4: Modern JavaScript Frameworks",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A406",
+      "title": "A6 REACT",
+      "course": "RS104",
+      "subtitle": "Week 5: Complex State Management in React Apps",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A501",
+      "title": "A1 SETUP",
+      "course": "RS105",
+      "subtitle": "Getting Started with Web Technologies",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A502",
+      "title": "A2 HTML",
+      "course": "RS105",
+      "subtitle": "Exploring HTML5 Features and APIs",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A503",
+      "title": "A3 CSS",
+      "course": "RS105",
+      "subtitle": "Advanced CSS for Responsive Design",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A504",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS105",
+      "subtitle": "Mastering Bootstrap for Web Projects",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A505",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS105",
+      "subtitle": "JavaScript: From Fundamentals to Functional Programming",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A506",
+      "title": "A6 REACT",
+      "course": "RS105",
+      "subtitle": "Developing SPA with React and Redux",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A601",
+      "title": "A1 SETUP",
+      "course": "RS106",
+      "subtitle": "Introduction to Web Development Environment",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A602",
+      "title": "A2 HTML",
+      "course": "RS106",
+      "subtitle": "Comprehensive HTML5 Training",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A603",
+      "title": "A3 CSS",
+      "course": "RS106",
+      "subtitle": "CSS3: Designing with Style and Elegance",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A604",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS106",
+      "subtitle": "Leveraging Bootstrap for Efficient Design",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A605",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS106",
+      "subtitle": "Advanced JavaScript and ES6 Features",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A606",
+      "title": "A6 REACT",
+      "course": "RS106",
+      "subtitle": "Building Interactive UIs with React",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A701",
+      "title": "A1 SETUP",
+      "course": "RS107",
+      "subtitle": "Web Development Foundations and Tools",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A702",
+      "title": "A2 HTML",
+      "course": "RS107",
+      "subtitle": "HTML5: Next Generation Web",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A703",
+      "title": "A3 CSS",
+      "course": "RS107",
+      "subtitle": "Creative Web Design with CSS3",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A704",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS107",
+      "subtitle": "Responsive Web Design with Bootstrap 4",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A705",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS107",
+      "subtitle": "Exploring Advanced JavaScript Techniques",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A706",
+      "title": "A6 REACT",
+      "course": "RS107",
+      "subtitle": "React for Professional Web Applications",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A801",
+      "title": "A1 SETUP",
+      "course": "RS108",
+      "subtitle": "Kickstarting Web Development: Setup and Best Practices",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A802",
+      "title": "A2 HTML",
+      "course": "RS108",
+      "subtitle": "Advanced HTML for Professional Web Development",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A803",
+      "title": "A3 CSS",
+      "course": "RS108",
+      "subtitle": "Mastering CSS for Web Design Excellence",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A804",
+      "title": "A4 BOOTSTRAP",
+      "course": "RS108",
+      "subtitle": "Bootstrap Techniques for Rapid Web Development",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A805",
+      "title": "A5 JAVASCRIPT",
+      "course": "RS108",
+      "subtitle": "The Complete JavaScript Course: From Zero to Hero",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    },
+    {
+      "_id": "A806",
+      "title": "A6 REACT",
+      "course": "RS108",
+      "subtitle": "Advanced React Development: Patterns and Practices",
+      "dueDate": "Sep 18 2024",
+      "points": "100"
+    
+    }
+  ]
