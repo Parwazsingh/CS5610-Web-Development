@@ -8,7 +8,7 @@ const string3 = stringArray1.find(a => a === 'string3');
     
     return(
         <div>
-            <h2>Map</h2>
+            <h2>Find Function</h2>
             four = {four}<br/>
             string3 = {string3}<br/>
         </div>
