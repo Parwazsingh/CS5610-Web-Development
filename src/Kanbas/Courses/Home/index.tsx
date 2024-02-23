@@ -1,4 +1,4 @@
-import { FaChartSimple, FaCircleCheck } from "react-icons/fa6";
+import { FaChartSimple, FaCircleCheck, FaCalendar } from "react-icons/fa6";
 import ModuleList from "../Modules/List";
 import { FaBan, FaCheckCircle, FaPlusCircle, FaRegCheckCircle, FaPlus, FaTimes, FaFileImport, FaCreativeCommons, FaCreativeCommonsSa, FaBullseye, FaBullhorn, FaBell } from "react-icons/fa";
 
@@ -52,24 +52,65 @@ function Home() {
                         </div>
                     </div>
                     <br />
-                    <div className="container">
-                        <div className="row">
-                            <div className="col"><h6><strong>Coming Up</strong></h6></div>
-                            <div style={{ textAlign: 'right' }} className="col"><a style={{ fontSize: 'small', color: 'red', textDecoration: 'none' }} href="#"><i className="fa-regular fa-calendar"></i> View Calendar</a></div>
-                        </div>
-                    </div>
-                    <hr />
-                    <ul style={{ listStyle: 'none' }}>
-                        <li>
-                            <a style={{ textDecoration: 'none' }} href="#"><span style={{ color: 'red' }}><i className="fa-regular fa-calendar"></i> Lecture</span> CS4550.12631.202410 <span><br />Sep 7 at 11:45am</span></a>
-                        </li>
-                        <li>
-                            <a style={{ textDecoration: 'none' }} href="#"><span style={{ color: 'red' }}><i className="fa-regular fa-calendar"></i> Lecture</span> CS4550.12631.202410 <span><br />Sep 11 at 11:45am</span></a>
-                        </li>
-                        <li>
-                            <a style={{ textDecoration: 'none' }} href="#"><span style={{ color: 'red' }}><i className="fa-regular fa-calendar"></i> Lecture</span><br /> CS5610 06 SP23 <span><br />Sep 11 at 6pm</span></a>
-                        </li>
-                    </ul>
+                    <div style={{marginLeft:"2px", marginRight:"2px"}}>
+        <div className="row">
+          <div className="col">
+            <h6>
+              <strong>Coming Up</strong>
+            </h6>
+          </div>
+          <div style={{ textAlign: "right" }} className="col">
+            <a
+              style={{
+                fontSize: "small",
+                color: "red",
+                textDecoration: "none",
+              }}
+              href="#"
+            >
+              <FaCalendar /> View Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <ul style={{ listStyle: "none", paddingLeft:"0rem"}}>
+        <li>
+          <a style={{ textDecoration: "none" }} href="#">
+            <span style={{ color: "red" }}>
+              <FaCalendar /> Lecture
+            </span>{" "}
+            CS4550.12631.202410{" "}
+            <span>
+              <br />
+              Sep 7 at 11:45am
+            </span>
+          </a>
+        </li>
+        <li>
+          <a style={{ textDecoration: "none" }} href="#">
+            <span style={{ color: "red" }}>
+              <FaCalendar /> Lecture
+            </span>{" "}
+            CS4550.12631.202410{" "}
+            <span>
+              <br />
+              Sep 11 at 11:45am
+            </span>
+          </a>
+        </li>
+        <li>
+          <a style={{ textDecoration: "none" }} href="#">
+            <span style={{ color: "red" }}>
+              <FaCalendar /> Lecture
+            </span> CS5610 06 SP23{" "}
+            <span>
+              <br />
+              Sep 11 at 6pm
+            </span>
+          </a>
+        </li>
+      </ul>
                 </div>
 
             </div>

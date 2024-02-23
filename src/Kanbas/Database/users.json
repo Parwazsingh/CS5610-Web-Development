@@ -88,5 +88,15 @@
       "email": "legolas@mirkwood.com",
       "dob": "2879-07-15",
       "role": "FACULTY"
-    }
+    },
+    {
+        "_id": "130",
+        "username": "shastri_ram",
+        "password": "ramshastri123",
+        "firstName": "ram",
+        "lastName": "Shastri",
+        "email": "ram_shammu@delhipolice.com",
+        "dob": "1976-11-10",
+        "role": "FACULTY"
+      }
   ]

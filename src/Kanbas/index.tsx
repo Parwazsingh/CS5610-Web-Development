@@ -10,7 +10,7 @@ function Kanbas() {
         <div className="d-none d-md-block position-fixed bottom-0">
         <KanbasNavigation/>
         </div>
-        <div style={{ flexGrow: 1 }} className="wd-ml-md-5">
+        <div style={{ flexGrow: 1 , width:"97%"}} className="wd-ml-md-5">
         <Routes>
           <Route path="/" element={<Navigate to="Dashboard" />} />
           <Route path="Account" element={<h1>Account</h1>} />
