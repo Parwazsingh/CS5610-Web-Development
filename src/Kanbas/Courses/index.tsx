@@ -1,4 +1,4 @@
-import { assignments, courses } from "../../Kanbas/Database";
+import db from "../../Kanbas/Database";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./Navigation";
@@ -10,7 +10,7 @@ import { FaGlasses } from "react-icons/fa";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const courseNav = ['Home', 'Modules', 'Piazza', 'Assignments', 'Grades', 'Zoom Meetings', 'Quizzes', 'People', 'Panopto Video', 'Discussions', 'Announcements', 'Pages', 'Files', 'Rubrics', 'Outcomes', 'Collaborations', 'Syllabus', 'Settings'];
@@ -20,7 +20,7 @@ function Courses() {
   let breadcrumb = listurl[listurl.length - 1];
   const lastSECOND = listurl[listurl.length - 2];
   if(lastSECOND == "Assignments"){
-    const assignmentName = assignments.find((assignment) => assignment._id=== listurl[listurl.length-1]);
+    const assignmentName = db.assignments.find((assignment) => assignment._id=== listurl[listurl.length-1]);
     breadcrumb = lastSECOND + "  >  " + assignmentName?.title;
   }
   return (

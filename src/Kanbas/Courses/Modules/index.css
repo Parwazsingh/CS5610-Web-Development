@@ -109,3 +109,80 @@ body * {
   color: red;
   text-decoration: none;
 }
+
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 4px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-secondary {
+  background-Color: #007BFF;
+  color: white;
+  padding: 5px 15px;
+  text-Align: center;
+  text-Decoration: none;
+  display: inline-block;
+  font-Size: 16px;
+  margin: 6px 4px;
+  cursor: pointer;
+  border: none;
+  border-Radius: 4px;
+}
+
+.form-control.my-1 {
+  padding: 4px 10px; /* Reduced padding to make the input field look smaller */
+  font-size: 14px; /* Adjust font size if needed */
+  border-radius: 4px; /* Consistent rounded corners */
+  border: 1px solid #ced4da; /* Border color */
+  margin-bottom: .5rem; /* Margin at the bottom */
+  height: 36px; 
+  
+  margin-right: 10px;
+  padding-right: 10px;
+}
+.form-control.my-2 {
+  padding: 10px 10px; /* More padding for larger textarea field */
+  font-size: 16px; /* Standard font size for textarea */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ced4da; /* Default bootstrap border color */
+  margin-bottom: 1rem; /* More spacing below textarea */
+  min-height: 100px; /* Minimum height for textarea */
+}
+
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 4px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+.btn-delete{
+  background-color: #f44336;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 4px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
