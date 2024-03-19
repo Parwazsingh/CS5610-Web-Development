@@ -9,9 +9,14 @@ import Assignments from "./Assignments";
 import { FaGlasses } from "react-icons/fa";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import AssignmentAddEditor from "./Assignments/assignmentAdd";
+import { KanbasState } from "../store";
+import { useSelector, useDispatch } from "react-redux";
 
 function Courses({ courses }: { courses: any[]; }) {
   const { courseId } = useParams();
+  const {assignmentId} = useParams();
+  console.log(assignmentId);
   const course = courses.find((course) => course._id === courseId);
   const courseNav = ['Home', 'Modules', 'Piazza', 'Assignments', 'Grades', 'Zoom Meetings', 'Quizzes', 'People', 'Panopto Video', 'Discussions', 'Announcements', 'Pages', 'Files', 'Rubrics', 'Outcomes', 'Collaborations', 'Syllabus', 'Settings'];
   const page = window.location.href;
@@ -19,8 +24,15 @@ function Courses({ courses }: { courses: any[]; }) {
   console.log(listurl.length);
   let breadcrumb = listurl[listurl.length - 1];
   const lastSECOND = listurl[listurl.length - 2];
+  const AssignmentList = useSelector((state: KanbasState) =>
+  state.assignmentsReducer.assignments);
+const assignment = useSelector((state: KanbasState) =>
+  state.assignmentsReducer.assignment);
   if(lastSECOND == "Assignments"){
-    const assignmentName = db.assignments.find((assignment) => assignment._id=== listurl[listurl.length-1]);
+    console.log(breadcrumb)
+    const selectedIds =  AssignmentList.map(({ _id }) => _id);
+    const assignmentName =  AssignmentList.find((assignment) => assignment._id==listurl[listurl.length-1]);
+    console.log(assignmentName)
     breadcrumb = lastSECOND + "  >  " + assignmentName?.title;
   }
   return (
@@ -63,6 +75,7 @@ function Courses({ courses }: { courses: any[]; }) {
               <Route path="Zoom Meetings" element={<h1>Zoom Meetings</h1>} />
               <Route path="Assignments" element={<Assignments />} />
               <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
+              <Route path ="Assignments/add" element={<AssignmentAddEditor/>} />
               <Route path="Grades" element={<Grades />} />
               <Route path="Quizzes" element={<h1>Quizzes</h1>} />
               <Route path="Grades" element={<h1>Grades</h1>} />

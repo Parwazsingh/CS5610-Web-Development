@@ -56,11 +56,7 @@ function AssignmentList() {
             style={{ border: "solid 0.5px", backgroundColor: "lightgray" }}
             type="button"
             className="btn custom-btn-outline me-2"
-            onClick={() =>
-              navigate(
-                `/Kanbas/Courses/${courseId}/Assignments/add`
-              )
-            }
+          
           >
             <FaPlus style={{ color: "gray" }} /> Group
           </button>
@@ -72,6 +68,11 @@ function AssignmentList() {
             }}
             type="button"
             className="btn custom-btn-outline me-2"
+            onClick={() =>
+              navigate(
+                `/Kanbas/Courses/${courseId}/Assignments/add`
+              )
+            }
           >
             <FaPlus /> Assignment
           </button>
@@ -188,7 +189,7 @@ function AssignmentList() {
                     style={{ fontSize: "12px", paddingLeft: "50px" }}
                     className=""
                   >
-                    Due {assignment.dueDate} at 11:59pm | {assignment.points}{" "}
+                    Due {assignment.dueDate} at 11:59pm | Available from {assignment.availableFromDate} until {assignment.availableUntilDate} |  {assignment.points}{" "}
                     pts
                   </p>
                 </li>

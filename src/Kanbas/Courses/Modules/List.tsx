@@ -113,6 +113,8 @@ function ModuleList() {
                             <FaGripVertical className="me-2" />
                             <FaCaretRight/>
                             {module.name}
+                            <br/>
+                            {module.description}
                             
                             <span className="float-end">
                             <button

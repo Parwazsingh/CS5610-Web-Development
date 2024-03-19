@@ -79,7 +79,7 @@ function AssignmentEditor() {
       <br />
 
       <div style={{ marginLeft: "10px" }}>
-        <h4>Assignment Name</h4>
+        <h5>Assignment Name</h5>
         <input
           value={assignment.title}
           className="form-control mb-2"
@@ -88,15 +88,15 @@ function AssignmentEditor() {
           }
         />
         <br />
+        <h5>Assignment Description</h5>
         <textarea
           className="form-control"
-          value={assignment.description}
+          value={assignment.subtitle}
           onChange={(e) =>
-            setAssignment({ ...assignment, description: e.target.value })
+            dispatch(setAssignment({ ...assignment, subtitle: e.target.value }))
           }
           cols={50}
           rows={5}
-          defaultValue="This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netify."
         ></textarea>
         <br />
 
@@ -247,14 +247,12 @@ function AssignmentEditor() {
                 style={{ width: "100%", justifyContent: "space-around" }}
               >
                 <div>
-                  <b>Available from</b>
-                  <br />
-                  <input className="form-control" type="date" />
-                </div>
-                <div>
-                  <b>Until</b>
-                  <br />
-                  <input className="form-control" type="date" />
+                <b>Available from</b><br />
+                                    <input value={assignment.availableFromDate} className="form-control" type="date" onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
+                                </div>
+                                <div>
+                                    <b>Until</b><br />
+                                    <input value={assignment.availableUntilDate} className="form-control" type="date" onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
                 </div>
               </div>
             </div>
@@ -299,11 +297,12 @@ function AssignmentEditor() {
           >
             Cancel
           </Link>
-          <Link
-            onClick={() => dispatch(addAssignment({...assignment, course:courseId}))} to={`/Kanbas/Courses/${courseId}/Assignments`}
-            className="btn btn-success ms-2 float-end">
+          <Link to={`/Kanbas/Courses/${courseId}/Assignments`}  onClick={() => dispatch(updateAssignment(assignment))}  className="btn btn-success ms-2 float-end" >Save</Link>
+          {/* <Link
+            onClick={() => dispatch(updateAssignment(assignment))} to={`/Kanbas/Courses/${courseId}/Assignments`}
+                        className="btn btn-success ms-2 float-end">
             Save
-          </Link>
+          </Link> */}
          
         </div>
       </div>

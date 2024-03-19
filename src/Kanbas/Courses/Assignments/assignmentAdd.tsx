@@ -1,0 +1,221 @@
+import React from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import db from "../../Database";
+import { FaEllipsisV } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
+import { KanbasState } from "../../store";
+import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "./assignmentsReducer";
+import { title } from "process";
+
+function AssignmentAddEditor() {
+    const { assignmentId } = useParams();
+    // const assignment = db.assignments.find(
+    //     (assignment) => assignment._id === assignmentId);
+    const { courseId } = useParams();
+    const navigate = useNavigate();
+    const handleSave = () => {
+        console.log("Actually saving assignment TBD in later assignments");
+        navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+    };
+
+    const AssignmentList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+    const assignment = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignment);
+    // const assignment = useSelector((state: KanbasState) => {
+    //    return assignmentId ? state.assignmentsReducer.assignments.find(a => a._id === assignmentId)
+    //                         : state.assignmentsReducer.assignment;});
+
+    const dispatch = useDispatch();
+    return (
+        <div style={{ width: "99%" }} className="flex-fill p-2 m-2">
+            <div className="wd-flex-row-container p-2">
+                <div className="flex-fill" style={{ textAlign: 'right' }}>
+                    <button style={{ color: 'green', border: 'none', backgroundColor: 'transparent' }} type="button" className="btn custom-btn-outline me-2">
+                        {/* <FontAwesomeIcon icon={faCircleCheck} style={{ paddingRight: '5px', color: 'green' }} /> */}<FaCircleCheck /> Published
+                    </button>
+                    <div className="dropdown" style={{ float: 'right' }}>
+                        <button
+                            style={{ backgroundColor: 'lightgray', color: 'lightgray' }}
+                            className="btn btn-secondary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <FaEllipsisV className="ms-2" style={{ color: 'black' }} />
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a className="dropdown-item" href="#">Edit</a></li>
+                            <li><a className="dropdown-item" href="#">Delete</a></li>
+                            <li><a className="dropdown-item" href="#">Hide</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <br />
+
+            <div style={{ marginLeft: '10px' }}>
+                <h5>Assignment Name</h5>
+                <input placeholder="New Assignment" value={assignment.title}
+                    onChange={(e) => dispatch(setAssignment({
+                        ...assignment, title: e.target.value
+                    }))}
+
+                    className="form-control mb-2" />
+                <br />
+                <h5>Assignment Description</h5>
+                <textarea placeholder="New Assignment Description"
+          className="form-control"
+          value={assignment.subtitle}
+          onChange={(e) =>
+            dispatch( setAssignment({ ...assignment, subtitle: e.target.value }))
+          }
+          cols={50}
+          rows={5}
+        ></textarea>
+                <br />
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>Points</div>
+                    <div className="col-sm-6 col-md-8 w-50">
+                    <input value={assignment.points} className="form-control" onChange={(e) => dispatch(setAssignment({ ...assignment, points: e.target.value }))} ></input>
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>Assignment Group</div>
+                    <div className="col-sm-6 col-md-8 w-50">
+                        <select className="form-control">
+                            <option>ASSIGNMENTS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>Display Grade as</div>
+                    <div className="col-sm-6 col-md-8 w-50">
+                        <select className="form-control">
+                            <option>Percentage</option>
+                            <option>Decimal</option>
+                            <option>Percentile</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>
+                        <input type="checkbox" />
+                    </div>
+                    <div className="col-sm-6 col-md-8" style={{ textAlign: 'start' }}>
+                        Do not count this assignment towards the final grade
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>Submission Type</div>
+                    <div className="col-sm-6 col-md-8 w-50" style={{ textAlign: 'start' }}>
+                        <div className="wd-group" style={{ border: '0.5px solid #ded9d9', borderRadius: '1%', padding: '10px' }}>
+                            <select className="form-control">
+                                <option>Online</option>
+                                <option>In-Person</option>
+                            </select>
+                            <br />
+                            <b>Online Entry Options</b>
+                            <br />
+                            <input type="checkbox" checked id="textEntry" />
+                            <label htmlFor="textEntry">Text Entry</label> <br />
+                            <input type="checkbox" checked /> Website URL <br />
+                            <label><input type="checkbox" checked /> Media recordings </label><br />
+                            <input type="checkbox" /> Student Annotation <br />
+                            <input type="checkbox" checked /> File Uploads <br />
+                            <input type="checkbox" /> Restrict Upload File Types <br />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end">
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}>Assign</div>
+                    <div className="col-sm-6 col-md-8 w-50" style={{ textAlign: 'start' }}>
+                        <div className="wd-group" style={{ border: '0.5px solid #ded9d9', borderRadius: '1%', padding: '10px' }}>
+                            <b>Assign to</b>
+                            <input className="form-control" type="text" placeholder="Choose" defaultValue="Everyone" aria-label="default input example" />
+                            <br />
+                            <b>Due</b>
+                            <input value={assignment.dueDate} className="form-control" type="date" onChange={(e) => dispatch(setAssignment({ ...assignment, dueDate: e.target.value }))} />
+                            <br />
+                            <div className="wd-flex-row-container" style={{ width: '100%', justifyContent: 'space-around' }}>
+                                <div>
+                                    <b>Available from</b><br />
+                                    <input value={assignment.availableFromDate} className="form-control" type="date" onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
+                                </div>
+                                <div>
+                                    <b>Until</b><br />
+                                    <input value={assignment.availableUntilDate} className="form-control" type="date" onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row g-0 text-end" style={{ paddingBottom: '15px' }}>
+                    <div className="col-6 col-md-4" style={{ paddingTop: '5px', paddingRight: '15px' }}></div>
+                    <div className="col-sm-6 col-md-8 w-50" style={{ textAlign: 'start' }}>
+                        <button className="btn" style={{ borderColor: 'lightgray', backgroundColor: 'lightgray', paddingBottom: '20px', width: '100%', height: '2rem' }}>
+                            <i className="fa fa-plus" aria-hidden="true"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr style={{ marginLeft: '10px' }} />
+
+            <div style={{ marginLeft: '10px' }}>
+                <div className="wd-flex-row-container wd-flex-grow-1" style={{ float: 'right' }}>
+
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                        className="btn btn-danger float-end">
+                        Cancel
+                    </Link>
+                    <Link onClick={() => dispatch(addAssignment({...assignment, course:courseId}))} to={`/Kanbas/Courses/${courseId}/Assignments`}
+                        className="btn btn-success ms-2 float-end">
+                        Save
+                    </Link>
+
+
+                </div>
+            </div>
+
+            <div className="wd-flex-row-container" style={{ paddingTop: '5px' }}>
+                <div style={{ marginLeft: '20px', paddingTop: '5px' }}>
+                    <input type="checkbox" />
+                </div>
+                <div style={{ marginLeft: '5px' }}>
+                    Notify users that this content has changed
+                </div>
+            </div>
+
+            <br />
+            <hr style={{ marginLeft: '10px' }} />
+        </div>
+
+
+
+        // <div>
+        //   <h2>Assignment Name</h2>
+        //   <input value={assignment?.title}
+        //          className="form-control mb-2" />
+        //   <button onClick={handleSave} className="btn btn-success ms-2 float-end">
+        //     Save
+        //   </button>
+        //   <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+        //         className="btn btn-danger float-end">
+        //     Cancel
+        //   </Link>
+        // </div>
+    );
+}
+export default AssignmentAddEditor;
