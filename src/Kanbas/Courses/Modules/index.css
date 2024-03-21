@@ -145,7 +145,7 @@ body * {
   border: 1px solid #ced4da; /* Border color */
   margin-bottom: .5rem; /* Margin at the bottom */
   height: 36px; 
-  
+  width: 50%;
   margin-right: 10px;
   padding-right: 10px;
 }
@@ -156,6 +156,7 @@ body * {
   border: 1px solid #ced4da; /* Default bootstrap border color */
   margin-bottom: 1rem; /* More spacing below textarea */
   min-height: 100px; /* Minimum height for textarea */
+  width: 50%;
 }
 
 .btn-edit {

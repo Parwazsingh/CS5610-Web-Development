@@ -66,8 +66,8 @@ function ModuleList() {
                 </select> */}
                 <div className="dropdown" style={{ float: "right" }}>
                     <button
-                        style={{ backgroundColor: "lightgray", color: "black" }}
-                        className="btn btn-secondary dropdown-toggle"
+                        style={{ backgroundColor: "lightgray", color: "black", borderColor: "gray" }}
+                        className="btn btn-secondary-1 dropdown-toggle"
                         type="button"
                         id="dropdownMenuButton1"
                         data-bs-toggle="dropdown"
@@ -80,10 +80,7 @@ function ModuleList() {
                 <button style={{ border: "solid", backgroundColor: "red", color: "white" }} type="button" className="btn custom-btn-module"><FaPlus className="ms-2" /> Module</button>
                 <button style={{ borderColor: "gray", backgroundColor: "lightgray", color: "black" }} type="button" className="btn custom-btn-module"><FaEllipsisV className="ms-2" /></button>
             </div>
-            <hr />
-            {/* <!-- Add buttons here --> */}
-            <ul style={{width: "99%"}} className="list-group wd-modules">
-            <li className="list-group-item">
+            <hr/>
             <button className="btn btn-primary me-1" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
                     <button className="btn btn-secondary" onClick={() => dispatch(updateModule(module))}>Update</button>
 
@@ -101,23 +98,17 @@ function ModuleList() {
                         value={module.description}
                         onChange={(e) =>  dispatch(setModule({ ...module, description: e.target.value }))}
                     />
+            {/* <!-- Add buttons here --> */}
+            <ul style={{width: "99%"}} className="list-group wd-modules">
+            <li className="list-group-item">
+           
       </li>
 
                 {moduleList.filter((module) => module.course === courseId).map((module) => (
                     <li
                         className="list-group-item"
                         onClick={() => setSelectedModule(module)}>
-             
-
-                        <div>
-                            <FaGripVertical className="me-2" />
-                            <FaCaretRight/>
-                            {module.name}
-                            <br/>
-                            {module.description}
-                            
-                            <span className="float-end">
-                            <button
+                      <button
                                className="btn-edit"
              onClick={() => dispatch(setModule(module))}>
               Edit
@@ -128,6 +119,16 @@ function ModuleList() {
                 onClick={() => dispatch(deleteModule(module._id))}>
               Delete
             </button>
+
+                        <div>
+                            <FaGripVertical className="me-2" />
+                            <FaCaretRight/>
+                            {module.name}
+                            <br/>
+                            {module.description}
+                            
+                            <span className="float-end">
+                   
                                 <FaCheckCircle className="text-success" />
                                 <FaCaretDown/>
                                 <FaPlusCircle className="ms-2" />

@@ -67,9 +67,16 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 <div className="card-body">
                   <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                     style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+                    
                     {course.name} 
                     <br/>
-                    <button onClick={(event) => {
+                  
+              </Link>
+            
+                  <p className="card-text">{course.name}</p>
+                  Available From {course.startDate} Until {course.endDate}
+                  <br/>
+                  <button onClick={(event) => {
                 event.preventDefault();
                 setCourse(course);
               }}
@@ -112,10 +119,23 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                       >
                       Delete
               </button>
-              </Link>
-                  <p className="card-text">{course.name}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">
-                    Go </Link>
+              <br/>
+                  <Link  style={{
+        backgroundColor: "#007BFF", 
+        color: "white",
+        padding: "5px 15px",
+        textAlign: "center",
+        textDecoration: "none",
+        display: "inline-block",
+        fontSize: "16px",
+        margin: "6px 4px",
+        cursor: "pointer",
+        border: "none",
+        borderRadius: "4px",
+      }}  to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">
+                    Go
+                    
+                     </Link>
                 </div>
               </div>
             </div>
