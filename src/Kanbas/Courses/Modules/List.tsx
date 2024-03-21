@@ -108,7 +108,17 @@ function ModuleList() {
                     <li
                         className="list-group-item"
                         onClick={() => setSelectedModule(module)}>
-                      <button
+                      
+
+                        <div>
+                            <FaGripVertical className="me-2" />
+                            <FaCaretRight/>
+                            {module.name}
+                            <br/>
+                            {module.description}
+                            
+                            <span className="float-end">
+                            <button
                                className="btn-edit"
              onClick={() => dispatch(setModule(module))}>
               Edit
@@ -119,16 +129,6 @@ function ModuleList() {
                 onClick={() => dispatch(deleteModule(module._id))}>
               Delete
             </button>
-
-                        <div>
-                            <FaGripVertical className="me-2" />
-                            <FaCaretRight/>
-                            {module.name}
-                            <br/>
-                            {module.description}
-                            
-                            <span className="float-end">
-                   
                                 <FaCheckCircle className="text-success" />
                                 <FaCaretDown/>
                                 <FaPlusCircle className="ms-2" />

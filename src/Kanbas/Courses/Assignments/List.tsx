@@ -142,7 +142,7 @@ function AssignmentList() {
               .filter((assignment) => assignment.course === courseId)
               .map((assignment) => (
                 <li key={assignment._id} className="list-group-item">
-                  <b>
+                  
                     <Link
                       style={{
                         paddingLeft: "50px",
@@ -154,7 +154,7 @@ function AssignmentList() {
                     >
                       {assignment.title}
                     </Link>
-                  </b>
+                  
                   <button
                     className="btn-delete float-end"
                     onClick={() => {
