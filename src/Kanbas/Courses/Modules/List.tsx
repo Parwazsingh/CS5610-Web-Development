@@ -115,8 +115,9 @@ function ModuleList() {
                             <FaCaretRight/>
                             {module.name}
                             <br/>
-                            {module.description}
-                            
+                            <span style={{marginLeft:"27px"}}>
+                            {module.description} 
+                            </span>
                             <span className="float-end">
                             <button
                                className="btn-edit"
