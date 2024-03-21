@@ -156,7 +156,7 @@ function AssignmentList() {
                     </Link>
                   
                   <button
-                    className="btn-delete float-end"
+                    className="btn-delete float-end" style={{ marginTop:"18px" }}
                     onClick={() => {
                       if (
                         window.confirm("Are you sure to delete this record?")
